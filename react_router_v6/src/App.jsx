@@ -28,12 +28,12 @@ const App = () =>{
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route>
+      <>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/movie" element={<Movie />} />
         <Route path="/contact" element={<Contact />} />
-      </Route>
+      </>
     )
   )
   return <RouterProvider router={router}/>
