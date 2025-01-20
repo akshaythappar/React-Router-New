@@ -6,6 +6,6 @@ export const AppLayout = ()=>{
     return <>
     <Header/>
     <Outlet/>
-    <Footer/>
+    <Footer/> 
     </>
 }
