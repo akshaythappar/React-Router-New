@@ -1219,4 +1219,8 @@
   }
   /***** End  media queries Section *****/
   Apollo
+
+  a[class=active]{
+    color:blue !important;
+  }
   

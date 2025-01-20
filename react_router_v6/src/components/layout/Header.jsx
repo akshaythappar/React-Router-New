@@ -17,36 +17,49 @@ export const Header = () => {
         </section>
 
         <div className="container">
-            <div className="navbar-brand">
-                <NavLink to="index">
-                    <p>ThapaFlix</p>
-                </NavLink>
-            </div>
+          <div className="navbar-brand">
+            <NavLink to="index">
+              <p>ThapaFlix</p>
+            </NavLink>
+          </div>
 
-            <nav className="navbar">
-                <ul>
-                    <li className="nav-item">
-                        <NavLink to="/" className="nav-link">
-                        Home
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/about" className="nav-link">
-                        about
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/movies" className="nav-link">
-                        movies
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/contact" className="nav-link">
-                        contact
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
+          <nav className="navbar">
+            <ul>
+              <li className="nav-item">
+                <NavLink
+                  to="/"
+                  className={(isActive) =>
+                    isActive ? "nav-link active-link" : "nav-link"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/about"
+                  className="nav-link"
+                  style={({isActive}) => {
+                    return {
+                      color: isActive ? "blue" : "black",
+                    };
+                  }}
+                >
+                  about
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/movies" className="nav-link">
+                  movies
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/contact" className="nav-link">
+                  contact
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
     </>
