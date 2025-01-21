@@ -5,6 +5,7 @@ import { Movie } from "./pages/Movie";
 import { Contact } from "./pages/Contact";
 import { AppLayout } from "./components/layout/AppLayout";
 import "./App.css";
+import { ErrorPage } from "./pages/ErrorPage";
 
 const App = () =>{
 
@@ -12,6 +13,7 @@ const App = () =>{
     {
       path:"/",
       element:<AppLayout/>,
+      errorElement:<ErrorPage/>,
       children:[
         {
           path: "/",
