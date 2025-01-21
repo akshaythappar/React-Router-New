@@ -5,6 +5,8 @@ import { Movie } from "./pages/Movie";
 import { Contact } from "./pages/Contact";
 import { AppLayout } from "./components/layout/AppLayout";
 import "./App.css";
+import { ErrorPage } from "./pages/ErrorPage";
+import { NotFound } from "./pages/NotFound";
 
 const App = () =>{
 
@@ -12,6 +14,7 @@ const App = () =>{
     {
       path:"/",
       element:<AppLayout/>,
+      // errorElement:<ErrorPage/>,
       children:[
         {
           path: "/",
@@ -28,6 +31,10 @@ const App = () =>{
         {
           path:"/contact",
           element:<Contact/>
+        },
+        {
+          path: "*",
+          element:<NotFound/>
         }
       ]
     },
