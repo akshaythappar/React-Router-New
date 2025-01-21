@@ -14,7 +14,7 @@ const App = () =>{
     {
       path:"/",
       element:<AppLayout/>,
-      // errorElement:<ErrorPage/>,
+      errorElement:<ErrorPage/>,
       children:[
         {
           path: "/",
@@ -32,10 +32,10 @@ const App = () =>{
           path:"/contact",
           element:<Contact/>
         },
-        {
-          path: "*",
-          element:<NotFound/>
-        }
+        // {
+        //   path: "*",
+        //   element:<NotFound/>
+        // }
       ]
     },
    
