@@ -28,7 +28,7 @@ export const ErrorPage = () => {
             Back to the homepage
         </NavLink> */}
         <button className="btn" onClick={handleGoBack}>Go Back</button>
-      </section>
+       </section>
     );
   }
   return <h1>The page you are looking does not exist</h1>
