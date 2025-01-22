@@ -1,5 +1,16 @@
-export const Movie = () =>{
-    return <>
-    <h1>This is movie component </h1>
+import { useLoaderData } from "react-router-dom";
+import { Card } from "../components/UI/Card";
+
+export const Movie = () => {
+  const moviesData = useLoaderData();
+
+  return (
+    <>
+    <ul className="container grid grid-four--cols">
+      {moviesData && moviesData.Search.map((currMovie) => {
+        return <Card key={currMovie.imdbID} currMovie={currMovie}/>
+      })}
+      </ul>
     </>
-}
+  );
+};
