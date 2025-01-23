@@ -8,6 +8,8 @@ import "./App.css";
 import { ErrorPage } from "./pages/ErrorPage";
 import { NotFound } from "./pages/NotFound";
 import { getMoviesData } from "./api/GetApiData";
+import { MovieDetails } from "./components/UI/MovieDetails";
+import { getMovieDetails } from "./api/GetMovieDetails";
 
 const App = () =>{
 
@@ -29,6 +31,11 @@ const App = () =>{
           path:"/movies",
           element:<Movie />,
           loader: getMoviesData
+        },
+        {
+          path:"/movies/:movieID",
+          element:<MovieDetails />,
+          loader: getMovieDetails,
         },
         {
           path:"/contact",
